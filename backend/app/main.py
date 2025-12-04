@@ -24,6 +24,7 @@ origins = [
     "http://localhost:5173",
     "http://localhost:3000",
     "https://business-opportunity-app-tjez93e1.devinapps.com",
+    "https://business-opportunity-app-tunnel-teb0f1pc.devinapps.com",
 ]
 
 app.add_middleware(
