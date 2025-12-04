@@ -20,12 +20,17 @@ app = FastAPI(
     version="1.0.0",
 )
 
-origins = ["*"]
+origins = [
+    "http://localhost:5173",
+    "http://localhost:3000",
+    "https://business-opportunity-app-tjez93e1.devinapps.com",
+]
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
-    allow_credentials=True,
+    allow_origin_regex=r"https://.*\.devinapps\.com",
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
